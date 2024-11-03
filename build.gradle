@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'com.Bard'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:31.0.1-jre'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/java'] // Set the custom source directory
+        }
+    }
+}
+
+tasks.register('run', JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'Bard' // Specify the main class to run
+}
+
