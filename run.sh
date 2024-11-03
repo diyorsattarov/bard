@@ -12,7 +12,12 @@ echo "Compiling Java files..."
 mkdir -p out
 javac -d out $(find src -name "*.java")
 
-# Run the main class
-echo "Running the application..."
-java -cp out Bard
+# Run the specified target (main application or tests)
+if [[ $1 == "test" ]]; then
+    echo "Running the test suite..."
+    java -cp out tests.RunTests
+else
+    echo "Running the application..."
+    java -cp out Bard
+fi
 
