@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# Clean any previous builds
-echo "Cleaning previous builds..."
-rm -rf out target build
+# Check for optional 'clean' argument
+if [[ $1 == "clean" ]]; then
+    echo "Cleaning previous builds..."
+    rm -rf out target build
+    exit 0
+fi
 
 # Compile with javac
 echo "Compiling Java files..."
