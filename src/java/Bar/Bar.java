@@ -6,6 +6,8 @@ public class Bar {
         barObject();
         barString();
         barMath();
+        barSystem();
+        barThread();
     }
 
     private static void barObject() {
@@ -23,10 +25,14 @@ public class Bar {
         int qux = 10;
         System.out.println("barMath max: " + Math.max(foo, qux));
     }
-    /*
+    
     private static void barSystem() {
         long quxT = System.currentTimeMillis();
-                
+        System.out.println("barSystem time: " + quxT);           
     }
-    */
+
+    private static void barThread() { 
+        Thread qux = new Thread(() -> System.out.println("barThread running"));
+        qux.start();
+    }
 }
