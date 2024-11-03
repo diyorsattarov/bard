@@ -43,8 +43,8 @@ public class Foo {
 
             while (baz) {
                 try (Socket barBaz = fooBaz.accept();
-                     BufferedReader fooIn = new BufferedReader(new InputStreamReader(barBaz.getInputStream()));
-                     PrintWriter fooOut = new PrintWriter(barBaz.getOutputStream(), true)) {
+                        BufferedReader fooIn = new BufferedReader(new InputStreamReader(barBaz.getInputStream()));
+                        PrintWriter fooOut = new PrintWriter(barBaz.getOutputStream(), true)) {
 
                     System.out.println("Qux connected.");
 
@@ -65,5 +65,11 @@ public class Foo {
             System.out.println("Bar error: " + e.getMessage());
         }
     }
+
+    // Method to generate a response for testing
+    public String baz(String barMsg) {
+        return "Response: " + barMsg.toUpperCase();
+    }
 }
+
 
