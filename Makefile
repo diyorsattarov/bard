@@ -10,3 +10,7 @@ all:
 clean:
 	rm -rf out
 
+# Run target to execute the compiled program
+run: all
+	java -cp out main
+
