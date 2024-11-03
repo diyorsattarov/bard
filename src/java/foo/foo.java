@@ -1,7 +1,7 @@
-package foo;
+package Foo;
 
-public class foo {
-    public static void foo() {
+public class Foo {
+    public static void main() {
         System.out.println("hellofoo");
     }
 }
