@@ -1,3 +1,6 @@
+# Set the project name. You can override this when calling `make`.
+PROJECT_NAME ?= Bard
+
 # Find all .java files in src/ recursively
 SOURCES := $(shell find src -name "*.java")
 
@@ -12,5 +15,5 @@ clean:
 
 # Run target to execute the compiled program
 run: all
-	java -cp out main
+	java -cp out $(PROJECT_NAME)
 
