@@ -10,6 +10,19 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Maven target directory
+target/
+
+# Maven specific files
+dependency-reduced-pom.xml
+release.properties
+dependency-reduced-pom-backup.xml
+
+# Eclipse/IDE files
+.classpath
+.project
+.settings/
+
 # Package Files #
 *.jar
 *.war
@@ -22,3 +35,4 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
